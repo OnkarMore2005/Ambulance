@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ambulance Routing System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Control Panel -->
+        <div class="control-panel">
+            <div class="header">
+                <h1>🚑 Emergency Control</h1>
+                <p>Smart Ambulance Routing System</p>
+            </div>
+            
+            <div class="emergency-section">
+                <button id="emergencyBtn" class="emergency-btn">
+                    <span class="btn-icon">🚨</span>
+                    <span class="btn-text">EMERGENCY</span>
+                </button>
+                
+                <div class="status-container">
+                    <div id="statusMessage" class="status-message">
+                        Click Emergency to find nearest hospital
+                    </div>
+                    
+                    <div id="loadingSpinner" class="loading-spinner hidden">
+                        <div class="spinner"></div>
+                        <span>Searching nearest hospital...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-card">
+                    <h3>📍 Current Location</h3>
+                    <div id="currentLocation" class="location-text">
+                        Location not detected
+                    </div>
+                </div>
+                
+                <div id="hospitalInfo" class="info-card hidden">
+                    <h3>🏥 Nearest Hospital</h3>
+                    <div id="hospitalName" class="hospital-name"></div>
+                    <div id="hospitalAddress" class="hospital-address"></div>
+                    <div id="hospitalDistance" class="hospital-distance"></div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>© 2026 Smart Ambulance System</p>
+                <p>Emergency Services Available 24/7</p>
+            </div>
+        </div>
+        
+        <!-- Right Map Panel -->
+        <div class="map-panel">
+            <div id="map" class="map-container"></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
